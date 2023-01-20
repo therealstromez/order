@@ -11,7 +11,7 @@
 		var options = {
 			  series: [
 				{
-					name: 'Net Profit',
+					name: 'Lợi nhuận',
 					data: [50, 70, 40, 80, 30, 60, 100],
 					//radius: 12,	
 				}, 				
@@ -54,7 +54,7 @@
 			},
 			xaxis: {
 				
-			  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July'],
+			  categories: ['Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy'],
 			  labels: {
 				style: {
 					colors: '#3e4954',
@@ -85,7 +85,7 @@
 			tooltip: {
 			  y: {
 				formatter: function (val) {
-				  return "$ " + val + " thousands"
+				  return "$ " + val + " Triệu"
 				}
 			  }
 			}
