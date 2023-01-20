@@ -9,3 +9,4 @@ const firebaseConfig = {
     measurementId: "G-EMM6X39SSZ"
 };
 firebase.initializeApp(firebaseConfig);
+console.log('Connected!');

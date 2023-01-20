@@ -62,7 +62,7 @@
 					],
 					datasets: [
 						{
-							label: "My First dataset",
+							label: "Khách",
 							data:  [35, 18, 15, 35, 40, 20, 30, 25, 22, 20, 45, 35, 35, 18, 15, 35, 40, 20, 30, 25, 22, 20, 45, 35, 30, 25, 22, 20, 45, 35],
 							borderColor: 'rgba(47, 76, 221, 1)',
 							borderWidth: "0",
@@ -151,12 +151,12 @@
 		var options = {
 			  series: [
 				{
-					name: 'Net Profit',
+					name: 'Lợi nhuận',
 					data: [31, 40, 28, 51, 42, 109, 100],
 					//radius: 12,	
 				}, 
 				{
-				  name: 'Revenue',
+				  name: 'Doanh thu',
 				  data: [11, 32, 45, 32, 34, 52, 41]
 				}, 
 				
@@ -218,7 +218,7 @@
 			},
 			xaxis: {
 				
-			  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July'],
+			  categories: ['Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy'],
 			  labels: {
 				style: {
 					colors: '#3e4954',
@@ -249,7 +249,7 @@
 			tooltip: {
 			  y: {
 				formatter: function (val) {
-				  return "$ " + val + " thousands"
+					  return val + " triệu ₫"
 				}
 			  }
 			}
@@ -303,3 +303,4 @@
 	});     
 
 })(jQuery);
+
