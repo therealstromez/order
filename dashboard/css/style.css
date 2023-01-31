@@ -8542,10 +8542,6 @@ a {
 .w-space-no {
   white-space: nowrap; }
 
-.content-body {
-  height: 100vh;
-}
-
 .content-body .container {
   margin-top: 40px; }
 .content-body .container-fluid {

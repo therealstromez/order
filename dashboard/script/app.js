@@ -1,0 +1,1 @@
+window.history.pushState('page2', 'Dashboard', '/index');
