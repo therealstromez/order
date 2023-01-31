@@ -473,6 +473,17 @@ section {
   width: 100%;
 }
 
+.voucher {
+  margin: .7rem 0;
+  border-radius: .5rem;
+  background: #f7f7f7;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: #130f40;
+  text-transform: none;
+  width: 100%;
+}
+
 .login-form-container form .remember {
   padding: 1rem 0;
   display: -webkit-box;
