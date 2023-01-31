@@ -218,7 +218,7 @@
 				},
 				xaxis: {
 
-					categories: ['Một', 'Hai', 'Ba', 'Bốn', 'Năm', 'Sáu', 'Bảy'],
+					categories: ['Tháng Một', 'Tháng Hai', 'Tháng Ba', 'Tháng Bốn', 'Tháng Năm', 'Tháng Sáu', 'Tháng Bảy'],
 					labels: {
 						style: {
 							colors: '#3e4954',
@@ -249,7 +249,7 @@
 				tooltip: {
 					y: {
 						formatter: function (val) {
-							return val + " triệu ₫"
+							return "₫"+ val + " triệu "
 						}
 					}
 				}

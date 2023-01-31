@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="36" height="36" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Momo" clip-path="url(#clip-path)">
+    <g id="Group_9" data-name="Group 9" transform="translate(2.471 3.176)">
+      <g id="Group_8" data-name="Group 8" transform="translate(0 0)">
+        <path id="Path_19" data-name="Path 19" d="M168.923,67.265a6.618,6.618,0,1,0-4.685-1.938A6.618,6.618,0,0,0,168.923,67.265Zm0-9.444a2.821,2.821,0,1,1-2.821,2.821A2.821,2.821,0,0,1,168.923,57.821Z" transform="translate(-144.488 -54.019)" fill="#a50064"/>
+        <path id="Path_20" data-name="Path 20" d="M168.942,157.4a6.618,6.618,0,1,0,4.685,1.938A6.618,6.618,0,0,0,168.942,157.4Zm0,9.444a2.821,2.821,0,1,1,2.821-2.821,2.821,2.821,0,0,1-2.821,2.821Z" transform="translate(-144.507 -141.286)" fill="#a50064"/>
+        <path id="Path_21" data-name="Path 21" d="M59.024,157.4a4.921,4.921,0,0,0-2.977,1,4.963,4.963,0,0,0-7.948,3.974v8.291h3.8v-8.337a1.122,1.122,0,1,1,2.244,0v8.322h3.8v-8.322a1.122,1.122,0,1,1,2.244,0v8.322H63.98v-8.291A4.958,4.958,0,0,0,59.024,157.4Z" transform="translate(-48.084 -141.286)" fill="#a50064"/>
+        <path id="Path_22" data-name="Path 22" d="M58.941,54a4.921,4.921,0,0,0-2.976,1A4.976,4.976,0,0,0,48,58.971v8.275h3.8V58.925a1.122,1.122,0,0,1,2.244,0v8.322h3.8V58.925a1.122,1.122,0,0,1,2.244,0v8.322h3.8V58.971A4.962,4.962,0,0,0,58.941,54Z" transform="translate(-48 -54)" fill="#a50064"/>
+      </g>
+    </g>
+  </g>
+</svg>

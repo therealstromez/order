@@ -92,7 +92,7 @@
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
-												<span>Kelvin Conrad</span>
+												<span>Minh Conrad</span>
 												<p>Donald is online</p>
 											</div>
 										</div>
@@ -776,7 +776,7 @@
 							<li class="nav-item dropdown header-profile">
 								<a class="nav-link" href="#" role="button" data-toggle="dropdown">
 									<div class="header-info">
-										<span>Xin chào, <strong>Kelvin</strong></span>
+										<span>Xin chào, <strong>Minh</strong></span>
 									</div>
 									<img src="images/profile/pic1.jpg" width="20" alt="" />
 								</a>
@@ -823,15 +823,15 @@
 				<ul class="metismenu" id="menu">
 					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-networking"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Quản lý</span>
 						</a>
 						<ul aria-expanded="false">
-							<li><a href="index.html">Dashboard</a></li>
-							<li><a href="page-analytics.html">Analytics</a></li>
-							<li><a href="page-review.html">Review</a></li>
-							<li><a href="page-order.html">Order</a></li>
-							<li><a href="page-order-list.html">Order List</a></li>
-							<li><a href="page-general-customers.html">General Customers</a></li>
+							<li><a href="home.html" target="contentIframe">Tổng quan</a></li>
+							<li><a href="page-analytics.html" target="contentIframe">Phân tích</a></li>
+							<li><a href="page-review.html" target="contentIframe">Đánh giá</a></li>
+							<li><a href="orders.html" target="contentIframe">Đơn hàng</a></li>
+							<li><a href="page-order-list.html" target="contentIframe">Order List</a></li>
+							<li><a href="page-general-customers.html" target="contentIframe">Thông tin khách hàng</a></li>
 						</ul>
 					</li>
 					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -947,11 +947,11 @@
 							<li><a href="./page-login.html">Login</a></li>
 							<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
 								<ul aria-expanded="false">
-									<li><a href="./page-error-400.html">Error 400</a></li>
-									<li><a href="./page-error-403.html">Error 403</a></li>
-									<li><a href="./page-error-404.html">Error 404</a></li>
-									<li><a href="./page-error-500.html">Error 500</a></li>
-									<li><a href="./page-error-503.html">Error 503</a></li>
+									<li><a href="./400.html">Error 400</a></li>
+									<li><a href="./403.html">Error 403</a></li>
+									<li><a href="./404.html">Error 404</a></li>
+									<li><a href="./500.html">Error 500</a></li>
+									<li><a href="./503.html">Error 503</a></li>
 								</ul>
 							</li>
 							<li><a href="./page-lock-screen.html">Lock Screen</a></li>
@@ -959,13 +959,13 @@
 					</li>
 				</ul>
 				<div class="copyright">
-					<p><strong>Eatio - Restaurant Admin Dashboard</strong> © 2020 All Rights Reserved</p>
+					<p><strong>MOI, Inc.</strong> © 2023 All Rights Reserved</p>
 
 				</div>
 			</div>
 		</div>
-		<div class="contentBody">
-			<iframe src="./home.html" id="contentIframe" style="height: 100vh; width: 100%;"></iframe>
+		<div class="content-body" style="height: 100vh;">
+			<iframe src="./home.html" name="contentIframe" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;" height="100%" width="100%"></iframe>
 		</div>
 	</div>
 	<script src="./vendor/global/global.min.js"></script>

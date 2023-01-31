@@ -1,4 +1,15 @@
-.contentBody iframe {
-    border: 0;
-    padding-top: 5rem;
-  }
+.content-body iframe {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.allOrders {
+  position: fixed;
+  bottom: 0;
+}
+
+.allOrders div {
+  width: 100%;
+  max-width: 100%;
+}
