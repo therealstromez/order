@@ -60,6 +60,6 @@ function sendthanhtoan() {
     firebase.database().ref().child('thanhtoan').push({
         'thanhtoan': 'test'
     });
-    // window.open('../pending/index.html', "_self");
+    window.open('../pending/index.html', "_self");
 
 }
