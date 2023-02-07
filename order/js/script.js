@@ -10,6 +10,7 @@ document.querySelector('#search-btn').onclick = () => {
 let cart = document.querySelector('.shopping-cart-container');
 
 $('.cart-btn').click(function () {
+    // $('.all').hide();
     cart.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
@@ -50,4 +51,14 @@ document.querySelector('.home').onmousemove = (e) => {
 document.querySelector('.home').onmouseleave = () => {
 
     document.querySelector('.home .home-parallax-img').style.transform = `translateX(0px) translateY(0px)`;
-}   
+}
+
+
+
+function sendthanhtoan() {
+    firebase.database().ref().child('thanhtoan').push({
+        'thanhtoan': 'test'
+    });
+    window.open('../pending/index.html', "_self");
+
+}
