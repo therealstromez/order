@@ -11,6 +11,7 @@ let cart = document.querySelector('.shopping-cart-container');
 
 $('.cart-btn').click(function () {
     // $('.all').hide();
+    // $(".shopping-cart-container")[0].scrollIntoView();
     cart.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
@@ -59,6 +60,6 @@ function sendthanhtoan() {
     firebase.database().ref().child('thanhtoan').push({
         'thanhtoan': 'test'
     });
-    window.open('../pending/index.html', "_self");
+    // window.open('../pending/index.html', "_self");
 
 }
