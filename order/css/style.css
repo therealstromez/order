@@ -297,15 +297,15 @@ section {
 }
 
 .shopping-cart-container {
-  position: fixed;
+  /* position: fixed; */
   bottom: 5rem;
   left: 0;
   right: 0;
   z-index: 1000;
-  height: calc(100vh - 5rem);
+  /* height: calc(100vh - 5rem); */
   background: #fff;
-  overflow-y: scroll;
-  padding-bottom: 5rem;
+  /* overflow-y: scroll; */
+  padding-bottom: 10rem;
   display: none;
 }
 
@@ -1403,4 +1403,13 @@ section {
 
 .cuk-delivery-infor-method {
   margin-bottom: 1rem;
+}
+
+
+.all {
+  display: none;
+}
+
+.active {
+  display: block;
 }

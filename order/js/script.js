@@ -12,6 +12,7 @@ let cart = document.querySelector('.shopping-cart-container');
 $('.cart-btn').click(function () {
     // $('.all').hide();
     // $(".shopping-cart-container")[0].scrollIntoView();
+    all.classList.toggle('active');
     cart.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
@@ -29,9 +30,11 @@ document.querySelector('#login-btn').onclick = () => {
 }
 
 let navbar = document.querySelector('.footer .navbar');
+let all = document.querySelector('.all');
 
 document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active');
+    all.classList.toggle('active');
     searchForm.classList.remove('active');
     cart.classList.remove('active');
     loginForm.classList.remove('active');
@@ -62,4 +65,83 @@ function sendthanhtoan() {
     });
     window.open('../pending/index.html', "_self");
 
+}
+
+$.getJSON('https://order-app-moi-default-rtdb.asia-southeast1.firebasedatabase.app/sanpham.json', function (data) {
+    console.log(data)
+    for (item in data) {
+        console.log(data[item]);
+        render(data[item], item)
+    }
+}).fail(function (error) {
+    console.log('cc')
+});
+
+var template = `<div class="box">
+<a href="#" class="fas fa-heart"></a>
+<div class="image">
+    <img src="%ANH%" loading="lazy" alt="">
+</div>
+<div class="content">
+    <h3>%TENSANPHAM%</h3>
+    <div class="price">%GIA%<span>%UPGIA%</span></div>
+    <a data-id='%ID%' data-tensanpham='%TENSANPHAM%' data-anh='%ANH%' data-gia='%GIA%' onclick="add(this)" class="btn">Thêm</a>
+</div>
+</div>`
+
+function render(data, id) {
+    // console.log(data.tensanpham)
+    var div = template
+    var div = div.replaceAll('%ANH%', data.anh)
+    var div = div.replaceAll('%GIA%', data.gia)
+    var div = div.replaceAll('%ID%', id)
+    var div = div.replaceAll('%UPGIA%', data.gia * 1 + 10 + '.000')
+    var div = div.replaceAll('%TENSANPHAM%', data.tensanpham)
+    $('.listDoAn').append(div)
+}
+
+var danhsach = []
+
+
+function add(data) {
+    // console.log($('.cart-btn .tien').text());
+    var tien = $('.cart-btn .tien').text() * 1 + $(data).data("gia") * 1 +'.000'
+    $('.tien').text(tien)
+    danhsach.push($(data).data("tensanpham"))
+    // console.log(danhsach);
+    // console.log($(data).data("id"))
+    // console.log($(data).data("gia") * 1);
+    var div = listcardtemp
+    var div = div.replaceAll('%ANH%', $(data).data("anh"))
+    var div = div.replaceAll('%GIA%', $(data).data("gia"))
+    var div = div.replaceAll('%TENSANPHAM%', $(data).data("tensanpham"))
+    $('.listcard').append(div)
+}
+
+var listcardtemp = `<div class="box">
+<i class="fas fa-times"></i>
+<img src="%ANH%" loading="lazy" alt="">
+<div class="content">
+    <h3>%TENSANPHAM%</h3>
+    <span> quantity : </span>
+    <input type="number" name="" value="1" id="">
+    <br>
+    <span> price : </span>
+    <span class="price"> %GIA% </span>
+</div>
+</div>`
+
+
+function updonhang() {
+        var id = Date.now()
+    firebase.database().ref(`donhang/${id}`).set({
+        danhsach: danhsach,
+        gia: $('.cart-btn .tien').text(),
+        trangthai: false
+    }).then(result => {
+        //done
+        // firebase.database().ref(`tongsanpham`).set(firebase.database.ServerValue.increment(1));
+        console.log('Đăng thành công!')
+        window.open(`./pending.html?id=${id}`, "_self");
+    })
 }
