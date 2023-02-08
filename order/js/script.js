@@ -133,8 +133,7 @@ var listcardtemp = `<div class="box">
 
 var id = Date.now()
 function updonhang() {
-        
-    firebase.database().ref(`donhang/`).push({
+    firebase.database().ref(`donhang/${id}`).update({
         danhsach: danhsach,
         gia: $('.cart-btn .tien').text(),
         trangthai: false,
