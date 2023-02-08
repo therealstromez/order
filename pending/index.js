@@ -39,19 +39,19 @@ function pad(val) {
     }
 }
 
-firebase.database().ref(`donhang${idkey}`).on("value", snapshot => {
-    // console.log(snapshot.val());
+firebase.database().ref(`donhang/${id}`).on("value", snapshot => {
+    console.log(snapshot.val().trangthai);
     if (snapshot.val().trangthai) {
         window.open(`../success/index.html?id=${id}`, "_self");
 
     }
-    var div = order
-    var div = div.replaceAll('%DANHSACH%', snapshot.val().danhsach)
-    var div = div.replaceAll('%ID%', snapshot.val().id)
-    var div = div.replaceAll('%IDKEY%', snapshot.key)
-    var div = div.replaceAll('%GIA%', snapshot.val().gia)
+    // var div = order
+    // var div = div.replaceAll('%DANHSACH%', snapshot.val().danhsach)
+    // var div = div.replaceAll('%ID%', snapshot.val().id)
+    // var div = div.replaceAll('%IDKEY%', snapshot.key)
+    // var div = div.replaceAll('%GIA%', snapshot.val().gia)
     // if (list >= 2) {
-        $('.listOrder').prepend(div)
+        // $('.listOrder').prepend(div)
     // }
     // ++list
 })

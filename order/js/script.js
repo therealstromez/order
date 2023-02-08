@@ -105,7 +105,7 @@ var danhsach = []
 
 function add(data) {
     // console.log($('.cart-btn .tien').text());
-    var tien = $('.cart-btn .tien').text() * 1 + $(data).data("gia") * 1 +'.000'
+    var tien = $('.cart-btn .tien').text() * 1 + $(data).data("gia") * 1 + '.000'
     $('.tien').text(tien)
     danhsach.push($(data).data("tensanpham"))
     // console.log(danhsach);
@@ -131,8 +131,18 @@ var listcardtemp = `<div class="box">
 </div>
 </div>`
 
-var id = Date.now()
+
+
+
 function updonhang() {
+    // if (checkcan(id)) {
+    //     sendDonHang(id)
+    // } else {
+    //     sendDonHang(Math.floor(Math.random() * (999 - 100 + 1) + 100));
+    // }
+    // checkcan(id)
+    var id = Math.floor(Math.random() * 90 + 10)
+    
     firebase.database().ref(`donhang/${id}`).update({
         danhsach: danhsach,
         gia: $('.cart-btn .tien').text(),
@@ -145,3 +155,33 @@ function updonhang() {
         window.open(`../pending/index.html?id=${id}`, "_self");
     })
 }
+
+function sendDonHang(id) {
+    firebase.database().ref(`donhang/${id}`).update({
+        danhsach: danhsach,
+        gia: $('.cart-btn .tien').text(),
+        trangthai: false,
+        id: id
+    }).then(result => {
+        //done
+        // firebase.database().ref(`tongsanpham`).set(firebase.database.ServerValue.increment(1));
+        console.log('Đăng thành công!')
+        window.open(`../pending/index.html?id=${id}`, "_self");
+    })
+}
+
+function checkcan(id) {
+    firebase.database().ref(`donhang/${id}`).once("value", snapshot => {
+        if (snapshot.exists()) {
+            // sendDonHang(Math.floor(Math.random() * (999 - 100 + 1) + 100));
+        } else {
+            console.log('errrr');
+            console.log(id);
+            // sendDonHang(id)
+        }
+    }
+    )
+}
+
+
+
