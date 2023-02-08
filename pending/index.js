@@ -1,8 +1,15 @@
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
+var iddonhang = document.getElementById("iddonhang");
 let params = new URLSearchParams(location.search);
 var start = params.get('start');
+var id = params.get('id');
+var idkey = params.get('idkey');
 var totalSeconds = 0;
+
+if (id) {
+    iddonhang.innerText = id
+}
 
 if (start) {
     setInterval(setTime, 1000);
@@ -31,3 +38,20 @@ function pad(val) {
         return valString;
     }
 }
+
+firebase.database().ref(`donhang${idkey}`).on("value", snapshot => {
+    // console.log(snapshot.val());
+    if (snapshot.val().trangthai) {
+        window.open(`../success/index.html?id=${id}`, "_self");
+
+    }
+    var div = order
+    var div = div.replaceAll('%DANHSACH%', snapshot.val().danhsach)
+    var div = div.replaceAll('%ID%', snapshot.val().id)
+    var div = div.replaceAll('%IDKEY%', snapshot.key)
+    var div = div.replaceAll('%GIA%', snapshot.val().gia)
+    // if (list >= 2) {
+        $('.listOrder').prepend(div)
+    // }
+    // ++list
+})

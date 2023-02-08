@@ -131,17 +131,18 @@ var listcardtemp = `<div class="box">
 </div>
 </div>`
 
-
+var id = Date.now()
 function updonhang() {
-        var id = Date.now()
-    firebase.database().ref(`donhang/${id}`).set({
+        
+    firebase.database().ref(`donhang/`).push({
         danhsach: danhsach,
         gia: $('.cart-btn .tien').text(),
-        trangthai: false
+        trangthai: false,
+        id: id
     }).then(result => {
         //done
         // firebase.database().ref(`tongsanpham`).set(firebase.database.ServerValue.increment(1));
         console.log('Đăng thành công!')
-        window.open(`./pending/index.html?id=${id}`, "_self");
+        window.open(`../pending/index.html?id=${id}`, "_self");
     })
 }
